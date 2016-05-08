@@ -2033,6 +2033,9 @@
                                     var editor = ace.edit("rawblogentryeditordiv");
                                     editor.setTheme("ace/theme/monokai");
                                     editor.getSession().setMode("ace/mode/html");
+                                    if (returnObject.outData.content.ContentText == null) {
+                                        returnObject.outData.content.ContentText = '';
+                                    }
                                     editor.setValue(returnObject.outData.content.ContentText);
                                     $('#rawblogentryeditorrow').show();
                                 });
@@ -2173,6 +2176,9 @@
                             var editor = ace.edit("rawpageeditordiv");
                             editor.setTheme("ace/theme/monokai");
                             editor.getSession().setMode("ace/mode/html");
+                            if (returnObject.outData.content.ContentText == null) {
+                                returnObject.outData.content.ContentText = '';
+                            }
                             editor.setValue(returnObject.outData.content.ContentText);
                             $('#rawpageeditorrow').show();
                         });
