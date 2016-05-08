@@ -1,0 +1,2517 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leopard Data Content Storm CMS Administration</title>
+    <LINK href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <LINK href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <LINK href="/stylesheets/style-admin.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+        <div id="loginpane">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Leopard Data Content Storm CMS Administration</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <form class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input type="text" placeholder="Username" class="form-control" id="loginusername">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Password" class="form-control" id="loginpassword">
+                            </div>
+                            <button type="button" class="btn btn-success" id="buttonLogin">Sign in</button>
+                        </form>
+                    </div><!--/.navbar-collapse -->
+                </div>
+            </nav>
+
+            <!-- Main jumbotron for a primary marketing message or call to action -->
+            <div class="jumbotron">
+                <div class="container">
+                    <h2>Welcome to your CMS Administration Login</h2>
+                    <p>This page allows you to login to this content storm cms site and administer this web application.  If you are an authorized administrator of this website please enter your username and password above, then press the "login" button.</p>
+                    <h6>c2016 Leopard Data Corporation</h6>
+                </div>
+            </div>
+
+        </div>
+        <div id="clientarea" style="height: 100%;">
+
+            <div class="internalheader">
+                    <p style="padding-left: 15px; padding-top: 10px">Leopard Data Content Storm CMS Administration
+                    </p>
+            </div>
+            <div class="tablewrapper">
+                <div id="leftpane" class="leftpane">
+
+                    <ul class="mainadminmenu">
+                        <div style="height: 30px"></div>
+                        <li class="mainadminmenuitem">
+                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                            <a class="mainadminmenuitemanchor" id="anchordashboard">Dashboard</a>
+
+                        </li>
+                        <li class="mainadminmenuitem">
+                            <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+                            <a class="mainadminmenuitemanchor" id="anchorblogs">Blogs</a>
+                        </li>
+                        <li class="mainadminmenuitem">
+                            <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+                            <a class="mainadminmenuitemanchor" id="anchorblogposts">Blog Posts</a>
+                        </li>
+                        <li class="mainadminmenuitem">
+                            <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span>
+                            <a class="mainadminmenuitemanchor" id="anchorpages">Pages</a>
+                        </li>
+                        <li class="mainadminmenuitem">
+                            <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                            <a class="mainadminmenuitemanchor" id="anchormedia">Media</a>
+                        </li>
+                        <li class="mainadminmenuitem">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <a class="mainadminmenuitemanchor" id="anchorsecurity">Security</a>
+                        </li>
+                        <div style="height: 30px"></div>
+                        <li class="mainadminmenuitem">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <a  class="mainadminmenuitemanchor" id="anchorsignout">Sign Out</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="rightpane" id="rightpane">
+                    <div id="home">
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                            Administration Home</div>
+                                        <div class="panel-body">
+                                            Welcome to the home page of your CMS administration web page.  You have successfully logged in.  From here you can easily add blog posts, new web pages, and setup user security.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+                                            Blogging</div>
+                                        <div class="panel-body">
+                                            Leopard Data Content Storm CMS is an amazing way to setup and publish a blog.  From this administration page you can setup as many blogs as you want, then publish as many blog articles as you would like.
+                                            <hr>
+                                            <button type="button" class="btn btn-success" id="SetupBlogsButton" style="display: block">Setup Blogs >></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                                            Content</div>
+                                        <div class="panel-body">
+                                            Leopard Data Content Storm is an amazing way to publish any type of web page.  From here you can publish an unlimited number of web pages to your website.
+                                            <hr>
+                                            <button type="button" class="btn btn-success" id="SetupPagesButton" style="display: block">Setup Pages >></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                            Security</div>
+                                        <div class="panel-body">
+                                            Leopard Data Content Storm has a powerful integrated security sub system to manage your content publishers.
+                                            <hr>
+                                            <button type="button" class="btn btn-success" id="SetupSecurityButton" style="display: block">Setup Security >></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                <h6>c2016 Leopard Data Corporation</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="blogs">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+                                            Blogs Administration Home</div>
+                                        <div class="panel-body">
+                                            <button type="button" class="btn btn-success" id="buttonaddblog">Add Blog >></button>
+                                            <hr>
+                                            <div id="datagridblogs"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="blogentries">
+                        <div class="container-fluid">
+                            <div class="row" id="rawblogentryeditorrow">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span>
+                                            Edit Page Raw</div>
+                                        <div class="panel-body">
+                                            <button type="button" class="btn btn-success" id="buttonupdaterawblogentry">Update Blog Entry >></button>
+                                            <button type="button" class="btn btn-success" id="buttonpreviewrawblogentry">Preview Blog Entry >></button>
+                                            <button type="button" class="btn btn-success" id="buttoncloserawblogentry">Close</button>
+                                            <hr>
+                                            <div id="rawblogentryeditordiv" rows="20" class="fullwidthtextarea"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="wysiwigblogentryeditorrow">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span>
+                                            Edit Page Wysiwig</div>
+                                        <div class="panel-body">
+                                            <button type="button" class="btn btn-success" id="buttonupdatewysiwigblogentry">Update Blog Entry >></button>
+                                            <button type="button" class="btn btn-success" id="buttonpreviewwysiwigblogentry">Preview Blog Entry >></button>
+                                            <button type="button" class="btn btn-success" id="buttonclosewysiwigblogentry">Close</button>
+                                            <hr>
+                                            <textarea id="wysiwigblogentryeditortextarea" rows="20" class="fullwidthtextarea"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+                                            Blog Entries Administration Home</div>
+                                        <div class="panel-body">
+                                            <button type="button" class="btn btn-success" id="buttonaddblogentry">Add Blog Entry >></button>
+                                            <hr>
+                                            <p>Please choose a blog you would like to modify</p>
+                                            <div id="selectlistblogs"></div>
+                                            <hr>
+                                            <div id="datagridblogentries"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pages">
+                        <div class="container-fluid">
+                            <div class="row" id="rawpageeditorrow">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span>
+                                            Edit Page Raw</div>
+                                        <div class="panel-body">
+                                            <button type="button" class="btn btn-success" id="buttonupdaterawpage">Update Page >></button>
+                                            <button type="button" class="btn btn-success" id="buttonpreviewrawpage">Preview Page >></button>
+                                            <button type="button" class="btn btn-success" id="buttoncloserawpage">Close</button>
+                                            <hr>
+                                            <div id="rawpageeditordiv" rows="20" class="fullwidthtextarea"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="wysiwigpageeditorrow">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span>
+                                            Edit Page Wysiwig</div>
+                                        <div class="panel-body">
+                                            <button type="button" class="btn btn-success" id="buttonupdatewysiwigpage">Update Page >></button>
+                                            <button type="button" class="btn btn-success" id="buttonpreviewwysiwigpage">Preview Page >></button>
+                                            <button type="button" class="btn btn-success" id="buttonclosewysiwigpage">Close</button>
+                                            <hr>
+                                            <textarea id="wysiwigpageeditortextarea" rows="20" class="fullwidthtextarea"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span>
+                                            Pages Administration Home</div>
+                                        <div class="panel-body">
+                                            <button type="button" class="btn btn-success" id="buttonaddpage">Add Page >></button>
+                                            <hr>
+                                            <select id="pagetypeselector">
+                                                <option value="mainpages">Main Pages</option>
+                                                <option value="subpages">Pages</option>
+                                            </select>
+                                            <hr>
+                                            <div id="datagridspages"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="media">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                                            Media Administration Home</div>
+                                        <div class="panel-body">
+                                            <button type="button" class="btn btn-success" id="buttonaddmedia">Add Media >></button>
+                                            <hr>
+                                            <div id="datagridmedia"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="security">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                            Security Administration Home</div>
+                                        <div class="panel-body">
+                                            <button type="button" class="btn btn-success" id="buttonadduser">Add User >></button>
+                                            <hr>
+                                            <div id="datagridsecurity"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+</body>
+</html>
+
+<!-- Modal Dialogs -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="addeditblogmodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add User</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="username">Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="blogname" placeholder="Enter blog name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="password">Description:</label>
+                        <div class="col-sm-4">
+                            <textarea rows="10" class="form-control" id="blogdescription" placeholder="Enter blog description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="blogisactive">Is Active:</label>
+                        <div class="col-sm-4">
+                            <input type="checkbox" class="form-control" id="blogisactive">
+                        </div>
+                    </div>
+                </form>
+                <hr class="validationerror" id="addeditblogvalidationerrorhr" >
+                <p class="validationerror" id="addeditblogvalidationerrornamerequired">* name is a required field</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="addeditblogsavechangesbutton">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="addeditblogentrymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Blog Entry</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="blogentryname">Name:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="blogentryname" placeholder="Enter blog entry name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="blogentrydescription">Description:</label>
+                        <div class="col-sm-7">
+                            <textarea rows="10" class="form-control" id="blogentrydescription" placeholder="Enter blog entry description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="blogentrytitle">Title:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="blogentrytitle" placeholder="Enter blog entry title">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="blogentrypath">Path:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="blogentrypath" placeholder="Enter blog entry path (ex. /path)">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" >Main Page Template:</label>
+                        <div class="col-sm-7">
+                            <div id="blogentrymainpageselector"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="blogentryrequiresession">Require Session:</label>
+                        <div class="col-sm-7">
+                            <input type="checkbox" class="form-control" id="blogentryrequiresession">
+                        </div>
+                    </div>
+                </form>
+                <hr class="validationerror" id="addeditblogentryvalidationerrorhr" >
+                <p class="validationerror" id="addeditblogentryvalidationerrornamerequired">* name is a required field</p>
+                <p class="validationerror" id="addeditblogentryvalidationerrortitlerequired">* title is a required field</p>
+                <p class="validationerror" id="addeditblogentryvalidationerrorpathrequired">* path is a required field</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="addeditblogentrysavechangesbutton">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="addeditpagemodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Page</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="pagename">Name:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="pagename" placeholder="Enter page name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="pagedescription">Description:</label>
+                        <div class="col-sm-7">
+                            <textarea rows="10" class="form-control" id="pagedescription" placeholder="Enter page description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="pagetitle">Title:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="pagetitle" placeholder="Enter page title">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="pagepath">Path:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="pagepath" placeholder="Enter page path (ex. /path)">
+                        </div>
+                    </div>
+                    <div class="form-group" id="pagetemplategroup">
+                        <label class="control-label col-sm-4" for="pagemainpagetemplate">Main Page Template:</label>
+                        <div class="col-sm-7">
+                            <div id="mainpageselector"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="pagerequiresession">Require Session:</label>
+                        <div class="col-sm-7">
+                            <input type="checkbox" class="form-control" id="pagerequiresession">
+                        </div>
+                    </div>
+                </form>
+                <hr class="validationerror" id="addeditpagevalidationerrorhr" >
+                <p class="validationerror" id="addeditpagevalidationerrornamerequired">* name is a required field</p>
+                <p class="validationerror" id="addeditpagevalidationerrortitlerequired">* title is a required field</p>
+                <p class="validationerror" id="addeditpagevalidationerrorpathrequired">* path is a required field</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="addeditpagesavechangesbutton">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="addeditmediamodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Media</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="mediatype">Type:</label>
+                        <div class="col-sm-7">
+                        <select id="mediatype">
+                            <option value="10">Image</option>
+                            <option value="8">Video</option>
+                            <option value="9">File</option>
+                        </select>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="mediaupload">File:</label>
+                        <div class="col-sm-7">
+                        <input type="file" name="pic" id="mediaupload">
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="medianame">Name:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="medianame" placeholder="Enter media name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="mediadescription">Description:</label>
+                        <div class="col-sm-7">
+                            <textarea rows="10" class="form-control" id="mediadescription" placeholder="Enter media description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="mediatitle">Title:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="mediatitle" placeholder="Enter media title">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="mediapath">Path:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="mediapath" placeholder="Enter media path (ex. /path)">
+                        </div>
+                    </div>
+                </form>
+                <hr class="validationerror" id="addeditmediavalidationerrorhr" >
+                <p class="validationerror" id="addeditmediavalidationerrortyperequired">* type is a required field</p>
+                <p class="validationerror" id="addeditmediavalidationerroruploadrequired">* upload is a required field</p>
+                <p class="validationerror" id="addeditmediavalidationerrornamerequired">* name is a required field</p>
+                <p class="validationerror" id="addeditmediavalidationerrortitlerequired">* title is a required field</p>
+                <p class="validationerror" id="addeditmediavalidationerrorpathrequired">* path is a required field</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="addeditmediasavechangesbutton">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="addeditusermodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add User</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="username">Username:</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="username" placeholder="Enter username">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="password">Password:</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="password" placeholder="Enter password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="repeatpassword">Repeat Password:</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="repeatpassword" placeholder="Enter repeat password">
+                    </div>
+                </div>
+                    </form>
+                <hr class="validationerror" id="adduservalidationerrorhr" >
+                <p class="validationerror" id="adduservalidationerrorusernamerequired">* username is a required field</p>
+                <p class="validationerror" id="adduservalidationerrorpasswordrequired">* password is a required field</p>
+                <p class="validationerror" id="adduservalidationerrorpasswordsmatch">* passwords must match</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="addeditusersavechangesbutton">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Handlbar templates -->
+
+<script id="users-template" type="text/x-handlebars-template">
+    <table>
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>change password</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each securityusers}}
+        <tr>
+            <td data-label="Username">{{Username}}</td>
+            <td data-label="ChangePassword"><a data-id="{{SecurityUserID}}">change password</a></td>
+            <td data-label="Edit"><a class="tableanchors" data-id="{{SecurityUserID}}">edit</a></td>
+            <td data-label="Delete"><a class="tableanchors" data-id="{{SecurityUserID}}">delete</a></td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</script>
+
+<script id="blogs-template" type="text/x-handlebars-template">
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Created</th>
+            <th>IsActive</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each blogs}}
+        <tr>
+            <td data-label="Name">{{Name}}</td>
+            <td data-label="Description">{{Description}}</td>
+            <td data-label="Created">{{Created}}</td>
+            <td data-label="IsActive">{{IsActive}}</td>
+            <td data-label="Edit"><a class="tableanchors" data-id="{{BlogID}}">edit</a></td>
+            <td data-label="Delete"><a class="tableanchors" data-id="{{BlogID}}">delete</a></td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</script>
+
+<script id="blogentriesselectlist-template" type="text/x-handlebars-template">
+        <select id="blogselect">
+            {{#each blogs}}
+            <option value="{{BlogID}}">{{Name}}</option>
+            {{/each}}
+        </select>
+</script>
+
+<script id="mainpageselectlist-template" type="text/x-handlebars-template">
+    <select id="pagemainpagetemplate">
+        {{#each content}}
+        <option value="{{ContentID}}">{{Name}}</option>
+        {{/each}}
+    </select>
+</script>
+
+<script id="blogentries-template" type="text/x-handlebars-template">
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Title</th>
+            <th>Path</th>
+            <th>Created</th>
+            <th>edit</th>
+            <th>edit raw</th>
+            <th>edit wysiwig</th>
+            <th>delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each blogentries}}
+        <tr>
+            <td data-label="Name">{{Name}}</td>
+            <td data-label="Description">{{Description}}</td>
+            <td data-label="Title">{{Title}}</td>
+            <td data-label="Path">{{Path}}</td>
+            <td data-label="Created">{{Created}}</td>
+            <td data-label="Edit"><a class="tableanchors" data-id="{{BlogEntryID}}">edit</a></td>
+            <td data-label="EditRaw"><a class="tableanchors" data-id="{{BlogEntryID}}">edit raw</a></td>
+            <td data-label="EditWysiwig"><a class="tableanchors" data-id="{{BlogEntryID}}">edit wysiwig</a></td>
+            <td data-label="Delete"><a class="tableanchors" data-id="{{BlogEntryID}}">delete</a></td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</script>
+
+<script id="pages-template" type="text/x-handlebars-template">
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Title</th>
+            <th>Path</th>
+            <th>Created</th>
+            <th>edit</th>
+            <th>edit raw</th>
+            <th>edit wysiwig</th>
+            <th>delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each pages}}
+        <tr>
+            <td data-label="Name">{{Name}}</td>
+            <td data-label="Description">{{Description}}</td>
+            <td data-label="Title">{{Title}}</td>
+            <td data-label="Path">{{Path}}</td>
+            <td data-label="Created">{{Created}}</td>
+            <td data-label="Edit"><a class="tableanchors" data-id="{{ContentID}}">edit</a></td>
+            <td data-label="EditRaw"><a class="tableanchors" data-id="{{ContentID}}">edit raw</a></td>
+            <td data-label="EditWysiwig"><a class="tableanchors" data-id="{{ContentID}}">edit wysiwig</a></td>
+            <td data-label="Delete"><a class="tableanchors" data-id="{{ContentID}}">delete</a></td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</script>
+
+<script id="media-template" type="text/x-handlebars-template">
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Title</th>
+            <th>Path</th>
+            <th>Content Type</th>
+            <th>Created</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each media}}
+        <tr>
+            <td data-label="Name">{{Name}}</td>
+            <td data-label="Description">{{Description}}</td>
+            <td data-label="Title">{{Title}}</td>
+            <td data-label="Path">{{Path}}</td>
+            <td data-label="Content Type">{{ContentTypeName}}</td>
+            <td data-label="Created">{{Created}}</td>
+            <td data-label="Edit"><a class="tableanchors" data-id="{{ContentID}}">edit</a></td>
+            <td data-label="Delete"><a class="tableanchors" data-id="{{ContentID}}">delete</a></td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</script>
+
+
+<!-- scripts -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="vendor/tinymce-4.3.10/js/tinymce/tinymce.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+<script src="vendor/bootbox-4.4.0/bootbox.min.js"></script>
+<script src="vendor/moment-2.12.0/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js"></script>
+<script src="typescripts/utility.js"></script>
+
+<script>
+
+    var isAdd = true;
+    var objectToModifyID = -1;
+    var loggedInSecurityUserID = 1;
+
+    function getBaseUrl() {
+        var re = new RegExp(/^.*\//);
+        return re.exec(window.location.href);
+    }
+
+    $(function() {
+
+        $('#clientarea').hide();
+        $('#loginpane').show();
+
+        $('#buttonLogin').click(function() {
+
+            // ajaj login here
+
+            var objectToSend = {};
+            objectToSend.username = $('#loginusername').val();
+            objectToSend.password = $('#loginpassword').val();
+
+            postAjaj('/ajaj/LoginSystemUser', objectToSend, function(returnObject) {
+
+                if (returnObject.outData.users.length > 0) {
+
+                    loggedInSecurityUserID = returnObject.outData.users[0].SecurityUserID;
+
+                    $('#clientarea').show();
+                    $('#loginpane').hide();
+
+                    $('#home').show();
+                    $('#blogs').hide();
+                    $('#blogentries').hide();
+                    $('#pages').hide();
+                    $('#media').hide();
+                    $('#security').hide();
+                }
+
+            });
+
+        });
+
+        $('#anchordashboard').click(function()
+        {
+            $('#home').show();
+            $('#blogs').hide();
+            $('#blogentries').hide();
+            $('#pages').hide();
+            $('#media').hide();
+            $('#security').hide();
+
+        });
+
+        $('#anchorblogs').click(function() {
+
+            $('#home').hide();
+            $('#blogs').show();
+            $('#blogentries').hide();
+            $('#pages').hide();
+            $('#media').hide();
+            $('#security').hide();
+
+        });
+
+        $('#anchorblogposts').click(function() {
+            $('#home').hide();
+            $('#blogs').hide();
+            $('#blogentries').show();
+            $('#pages').hide();
+            $('#media').hide();
+            $('#security').hide();
+
+        });
+
+        $('#anchorpages').click(function() {
+            $('#home').hide();
+            $('#blogs').hide();
+            $('#blogentries').hide();
+            $('#pages').show();
+            $('#media').hide();
+            $('#security').hide();
+        });
+
+        $('#anchormedia').click(function() {
+            $('#home').hide();
+            $('#blogs').hide();
+            $('#blogentries').hide();
+            $('#pages').hide();
+            $('#media').show();
+            $('#security').hide();
+        });
+
+        $('#anchorsecurity').click(function() {
+            $('#home').hide();
+            $('#blogs').hide();
+            $('#blogentries').hide();
+            $('#pages').hide();
+            $('#media').hide();
+            $('#security').show();
+        });
+
+        $('#SetupBlogsButton').click(function() {
+
+            $('#home').hide();
+            $('#blogs').show();
+            $('#blogentries').hide();
+            $('#pages').hide();
+            $('#media').hide();
+            $('#security').hide();
+
+        });
+
+        $('#SetupPagesButton').click(function() {
+
+            $('#home').hide();
+            $('#blogs').hide();
+            $('#blogentries').hide();
+            $('#pages').show();
+            $('#media').hide();
+            $('#security').hide();
+
+        });
+
+        $('#SetupSecurityButton').click(function() {
+
+            $('#home').hide();
+            $('#blogs').hide();
+            $('#blogentries').hide();
+            $('#pages').hide();
+            $('#media').hide();
+            $('#security').show();
+
+            InitializeSecurity();
+
+        });
+
+        $('#anchorsignout').click(function() {
+
+            $('#clientarea').hide();
+            $('#loginpane').show();
+        });
+
+        $('#buttonsavepage').click(function() {
+
+            alert($('#mytextarea').text());
+            alert(tinymce.activeEditor.getContent());
+        });
+
+        InitializeBlogs();
+        InitializeBlogEntries();
+        InitializePages();
+        InitializeMedia();
+        InitializeSecurity();
+
+        $('#buttonaddblog').click(function() {
+
+            isAdd = true;
+
+            $('#addeditblogvalidationerrorhr').hide();
+            $('#addeditblogvalidationerrornamerequired').hide();
+
+            $('#addeditblogmodal').modal({keyboard: false});
+
+        });
+
+        $('#buttonupdaterawblogentry').click(function() {
+
+            var objectToSend = {};
+            objectToSend.contentid = objectToModifyID;
+
+            postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                if (returnObject.result == true) {
+
+                    postAjaj('/ajaj/RetrieveContentDependencies', objectToSend, function(returnObjectDep) {
+
+                        for (var i = 0; i < returnObjectDep.outData.contentdependencies.length; i++) {
+
+                            if (returnObjectDep.outData.contentdependencies[i].ContentTypeID == 6) {
+
+                                var objectToSend = {};
+
+                                objectToSend.content = {};
+                                objectToSend.content.ContentID = objectToModifyID;
+                                objectToSend.content.ContentTypeID = 2;
+                                objectToSend.content.Title = returnObject.outData.content.Title;
+                                objectToSend.content.Path = returnObject.outData.content.Path;
+                                objectToSend.content.Name = returnObject.outData.content.Name;
+                                objectToSend.content.Description = returnObject.outData.content.Description;
+                                objectToSend.content.WebApplicationID = webApplicationId;
+                                objectToSend.content.ContentBlob = returnObject.outData.content.ContentBlob;
+                                var editor = ace.edit("rawblogentryeditordiv");
+                                objectToSend.content.ContentText = editor.getValue();
+                                objectToSend.content.RequireSession = returnObject.outData.content.RequireSession;
+                                objectToSend.content.Created = returnObject.outData.content.Created;
+
+                                postAjaj('/ajaj/ModifyContent', objectToSend, function (returnObject) {
+
+                                    if (returnObject.result == true) {
+
+                                        clearAndAddContentDependency(objectToSend.content.ContentID, returnObjectDep.outData.contentdependencies[i].ContentID, function() {
+
+
+                                        });
+                                    }
+                                });
+                                break;
+                            }
+                        }
+                    });
+                }
+            });
+
+        });
+
+        $('#buttonpreviewrawblogentry').click(function() {
+
+            var objectToSend = {};
+            objectToSend.contentid = objectToModifyID;
+
+            postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                var url = getBaseUrl()[0];
+                url = url.substring(0, url.length - 1);
+                url = url + returnObject.outData.content.Path;
+                window.open(url, '_blank');
+
+            });
+
+        });
+
+        $('#rawblogentryeditorrow').hide();
+
+        $('#buttoncloserawblogentry').click(function() {
+            $('#rawblogentryeditorrow').hide();
+        });
+
+        $('#buttonupdatewysiwigblogentry').click(function() {
+
+            var objectToSend = {};
+            objectToSend.contentid = objectToModifyID;
+
+            postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                if (returnObject.result == true) {
+
+                    postAjaj('/ajaj/RetrieveContentDependencies', objectToSend, function(returnObjectDep) {
+
+                        for (var i = 0; i < returnObjectDep.outData.contentdependencies.length; i++) {
+
+                            if (returnObjectDep.outData.contentdependencies[i].ContentTypeID == 6) {
+
+                                var objectToSend = {};
+
+                                objectToSend.content = {};
+                                objectToSend.content.ContentID = objectToModifyID;
+                                objectToSend.content.ContentTypeID = 2;
+                                objectToSend.content.Title = returnObject.outData.content.Title;
+                                objectToSend.content.Path = returnObject.outData.content.Path;
+                                objectToSend.content.Name = returnObject.outData.content.Name;
+                                objectToSend.content.Description = returnObject.outData.content.Description;
+                                objectToSend.content.WebApplicationID = webApplicationId;
+                                objectToSend.content.ContentBlob = returnObject.outData.content.ContentBlob;
+                                objectToSend.content.ContentText = tinyMCE.activeEditor.getContent({format : 'raw'});
+                                objectToSend.content.RequireSession = returnObject.outData.content.RequireSession;
+                                objectToSend.content.Created = returnObject.outData.content.Created;
+
+                                postAjaj('/ajaj/ModifyContent', objectToSend, function (returnObject) {
+
+                                    if (returnObject.result == true) {
+
+                                        clearAndAddContentDependency(objectToSend.content.ContentID, returnObjectDep.outData.contentdependencies[i].ContentID, function() {
+
+
+                                        });
+                                    }
+                                });
+                                break;
+                            }
+                        }
+                    });
+                }
+            });
+
+        });
+
+        $('#buttonpreviewwysiwigblogentry').click(function() {
+
+            var objectToSend = {};
+            objectToSend.contentid = objectToModifyID;
+
+            postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                var url = getBaseUrl()[0];
+                url = url.substring(0, url.length - 1);
+                url = url + returnObject.outData.content.Path;
+                window.open(url, '_blank');
+
+            });
+
+        });
+
+        $('#wysiwigblogentryeditorrow').hide();
+
+        $('#buttonclosewysiwigblogentry').click(function() {
+
+            $('#wysiwigblogentryeditorrow').hide();
+        });
+
+        $('#buttonaddblogentry').click(function() {
+
+            isAdd = true;
+
+            $('#addeditblogentryvalidationerrorhr').hide();
+            $('#addeditblogentryvalidationerrornamerequired').hide();
+            $('#addeditblogentryvalidationerrortitlerequired').hide();
+            $('#addeditblogentryvalidationerrorpathrequired').hide();
+
+            var objectToSend = {};
+            objectToSend.webapplicationid = webApplicationId;
+            objectToSend.ContentTypeIDs = [];
+            objectToSend.ContentTypeIDs.push(6);
+
+            postAjaj('/ajaj/RetrieveContentWithCriteria', objectToSend, function(returnObject) {
+
+                if (returnObject.result == true) {
+
+                    var source = $('#mainpageselectlist-template').html();
+                    var template = Handlebars.compile(source);
+                    var merge = template({content: returnObject.outData.content});
+                    $('#blogentrymainpageselector').html(merge);
+
+                    $('#addeditblogentrymodal').modal({keyboard: false});
+                }
+            });
+
+        });
+
+        $('#addeditblogentrysavechangesbutton').click(function() {
+
+            $('#addeditblogentryvalidationerrorhr').hide();
+            $('#addeditblogentryvalidationerrornamerequired').hide();
+            $('#addeditblogentryvalidationerrortitlerequired').hide();
+            $('#addeditblogentryvalidationerrorpathrequired').hide();
+
+            var blogentryname = $('#blogentryname').val();
+            var blogentrytitle = $('#blogentrytitle').val();
+            var blogentrypath = $('#blogentrypath').val();
+            var blogentrydescription = $('#blogentrydescription').val();
+            var blogentryrequiresession = $('#blogentryrequiresession').is('checked');
+            var blogentrymainpagetemplateid = $('#pagemainpagetemplate').val();
+
+            var validationfailed = false;
+
+            if (blogentryname.length == 0) {
+                validationfailed = true;
+                $('#addeditblogentryvalidationerrornamerequired').show();
+            }
+
+            if (blogentrytitle.length == 0) {
+                validationfailed = true;
+                $('#addeditblogentryvalidationerrortitlerequired').show();
+            }
+
+            if (blogentrypath.length == 0) {
+                validationfailed = true;
+                $('#addeditblogentryvalidationerrorpathrequired').show();
+            }
+
+            if (true == validationfailed)
+                $('#addeditblogentryvalidationerrorhr').show();
+
+            if (false === validationfailed) {
+
+                if (isAdd == true) {
+
+                    $('#addeditblogentrymodal').modal('hide');
+
+                    var objectToSend = {};
+
+                    objectToSend.content = {};
+                    objectToSend.content.ContentTypeID = 2;
+                    objectToSend.content.Title = blogentrytitle;
+                    objectToSend.content.Path = blogentrypath;
+                    objectToSend.content.Name = blogentryname;
+                    objectToSend.content.Description = blogentrydescription;
+                    objectToSend.content.WebApplicationID = webApplicationId;
+                    objectToSend.content.ContentBlob = null;
+                    objectToSend.content.ContentText = null;
+                    objectToSend.content.RequireSession = blogentryrequiresession;
+                    objectToSend.content.Created = moment().toISOString();
+
+                    postAjaj('/ajaj/AddContent', objectToSend, function (returnObject) {
+
+                        if (returnObject.result == true) {
+
+                            var newContentID = returnObject.outData.contentid;
+
+                            var objectToSendAgain = {};
+                            objectToSendAgain.contentdependency = {};
+                            objectToSendAgain.contentdependency.ContentID = returnObject.outData.contentid;
+                            objectToSendAgain.contentdependency.DependsOnContentID = blogentrymainpagetemplateid;
+
+                            postAjaj('/ajaj/AddContentDependency', objectToSendAgain, function(returnObject) {
+
+                                objectToSend.blogentry = {};
+                                objectToSend.blogentry.BlogID = parseInt($('#blogselect').val());
+                                objectToSend.blogentry.ContentID = newContentID;
+                                objectToSend.blogentry.PublishDate = moment().toISOString();
+                                objectToSend.blogentry.OwnerSecurityUserID = loggedInSecurityUserID;
+                                objectToSend.blogentry.IsVisible = 1;
+
+                                postAjaj('/ajaj/AddBlogEntry', objectToSend, function(returnObject) {
+                                    InitializeBlogEntries();
+                                })
+                            });
+                        }
+                    });
+                }
+                else {
+
+                    var objectToSend = {};
+                    objectToSend.contentid = objectToModifyID;
+
+                    postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                        if (returnObject.result == true) {
+
+                            $('#addeditblogentrymodal').modal('hide');
+
+                            var objectToSend = {};
+
+                            objectToSend.content = {};
+                            objectToSend.content.ContentID = objectToModifyID;
+                            objectToSend.content.ContentTypeID = 2;
+                            objectToSend.content.Title = blogentrytitle;
+                            objectToSend.content.Path = blogentrypath;
+                            objectToSend.content.Name = blogentryname;
+                            objectToSend.content.Description = blogentrydescription;
+                            objectToSend.content.WebApplicationID = webApplicationId;
+                            objectToSend.content.ContentBlob = returnObject.outData.content.ContentBlob;
+                            objectToSend.content.ContentText = returnObject.outData.content.ContentText;
+                            objectToSend.content.RequireSession = blogentryrequiresession;
+                            objectToSend.content.Created = returnObject.outData.content.Created;
+
+                            postAjaj('/ajaj/ModifyContent', objectToSend, function (returnObject) {
+
+                                if (returnObject.result == true) {
+
+                                    clearAndAddContentDependency(objectToSend.content.ContentID, blogentrymainpagetemplateid, function() {
+
+                                        InitializeBlogEntries();
+
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+            }
+
+        });
+
+        $('#buttonupdaterawpage').click(function() {
+
+            var objectToSend = {};
+            objectToSend.contentid = objectToModifyID;
+
+            postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                if (returnObject.result == true) {
+
+                    postAjaj('/ajaj/RetrieveContentDependencies', objectToSend, function(returnObjectDep) {
+
+                        if (returnObjectDep.outData.contentdependencies.length > 0) {
+
+                            for (var i = 0; i < returnObjectDep.outData.contentdependencies.length; i++) {
+
+                                if (returnObjectDep.outData.contentdependencies[i].ContentTypeID == 6) {
+
+                                    var objectToSend = {};
+
+                                    objectToSend.content = {};
+                                    objectToSend.content.ContentID = objectToModifyID;
+                                    objectToSend.content.ContentTypeID = 2;
+                                    objectToSend.content.Title = returnObject.outData.content.Title;
+                                    objectToSend.content.Path = returnObject.outData.content.Path;
+                                    objectToSend.content.Name = returnObject.outData.content.Name;
+                                    objectToSend.content.Description = returnObject.outData.content.Description;
+                                    objectToSend.content.WebApplicationID = webApplicationId;
+                                    objectToSend.content.ContentBlob = returnObject.outData.content.ContentBlob;
+                                    var editor = ace.edit("rawpageeditordiv");
+                                    objectToSend.content.ContentText = editor.getValue();
+                                    objectToSend.content.RequireSession = returnObject.outData.content.RequireSession;
+                                    objectToSend.content.Created = returnObject.outData.content.Created;
+
+                                    postAjaj('/ajaj/ModifyContent', objectToSend, function (returnObject) {
+
+                                        if (returnObject.result == true) {
+
+                                            clearAndAddContentDependency(objectToSend.content.ContentID, returnObjectDep.outData.contentdependencies[i].ContentID, function () {
+
+
+                                            });
+                                        }
+                                    });
+                                    break;
+                                }
+                            }
+                        }
+                        else {
+                            var objectToSend = {};
+
+                            objectToSend.content = {};
+                            objectToSend.content.ContentID = objectToModifyID;
+                            objectToSend.content.ContentTypeID = 6;
+                            objectToSend.content.Title = returnObject.outData.content.Title;
+                            objectToSend.content.Path = returnObject.outData.content.Path;
+                            objectToSend.content.Name = returnObject.outData.content.Name;
+                            objectToSend.content.Description = returnObject.outData.content.Description;
+                            objectToSend.content.WebApplicationID = webApplicationId;
+                            objectToSend.content.ContentBlob = returnObject.outData.content.ContentBlob;
+                            var editor = ace.edit("rawpageeditordiv");
+                            objectToSend.content.ContentText = editor.getValue();
+                            objectToSend.content.RequireSession = returnObject.outData.content.RequireSession;
+                            objectToSend.content.Created = returnObject.outData.content.Created;
+
+                            postAjaj('/ajaj/ModifyContent', objectToSend, function (returnObject) {
+
+                                if (returnObject.result == true) {
+
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+
+        });
+
+        $('#buttonpreviewrawpage').click(function() {
+
+            var objectToSend = {};
+            objectToSend.contentid = objectToModifyID;
+
+            postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                var url = getBaseUrl()[0];
+                url = url.substring(0, url.length - 1);
+                url = url + returnObject.outData.content.Path;
+                window.open(url, '_blank');
+
+            });
+        });
+
+        $('#rawpageeditorrow').hide();
+
+        $('#buttoncloserawpage').click(function() {
+            $('#rawpageeditorrow').hide();
+        });
+
+        $('#buttonupdatewysiwigpage').click(function() {
+
+            var objectToSend = {};
+            objectToSend.contentid = objectToModifyID;
+
+            postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                if (returnObject.result == true) {
+
+                    postAjaj('/ajaj/RetrieveContentDependencies', objectToSend, function(returnObjectDep) {
+
+                        if (returnObjectDep.outData.contentdependencies.length > 0) {
+
+                            for (var i = 0; i < returnObjectDep.outData.contentdependencies.length; i++) {
+
+                                if (returnObjectDep.outData.contentdependencies[i].ContentTypeID == 6) {
+
+                                    var objectToSend = {};
+
+                                    objectToSend.content = {};
+                                    objectToSend.content.ContentID = objectToModifyID;
+                                    objectToSend.content.ContentTypeID = 2;
+                                    objectToSend.content.Title = returnObject.outData.content.Title;
+                                    objectToSend.content.Path = returnObject.outData.content.Path;
+                                    objectToSend.content.Name = returnObject.outData.content.Name;
+                                    objectToSend.content.Description = returnObject.outData.content.Description;
+                                    objectToSend.content.WebApplicationID = webApplicationId;
+                                    objectToSend.content.ContentBlob = returnObject.outData.content.ContentBlob;
+                                    objectToSend.content.ContentText = tinyMCE.activeEditor.getContent({format: 'raw'});
+                                    objectToSend.content.RequireSession = returnObject.outData.content.RequireSession;
+                                    objectToSend.content.Created = returnObject.outData.content.Created;
+
+                                    postAjaj('/ajaj/ModifyContent', objectToSend, function (returnObject) {
+
+                                        if (returnObject.result == true) {
+
+                                            clearAndAddContentDependency(objectToSend.content.ContentID, returnObjectDep.outData.contentdependencies[i].ContentID, function () {
+
+
+                                            });
+                                        }
+                                    });
+                                    break;
+                                }
+                            }
+                        }
+                        else {
+                            var objectToSend = {};
+
+                            objectToSend.content = {};
+                            objectToSend.content.ContentID = objectToModifyID;
+                            objectToSend.content.ContentTypeID = 6;
+                            objectToSend.content.Title = returnObject.outData.content.Title;
+                            objectToSend.content.Path = returnObject.outData.content.Path;
+                            objectToSend.content.Name = returnObject.outData.content.Name;
+                            objectToSend.content.Description = returnObject.outData.content.Description;
+                            objectToSend.content.WebApplicationID = webApplicationId;
+                            objectToSend.content.ContentBlob = returnObject.outData.content.ContentBlob;
+                            objectToSend.content.ContentText = tinyMCE.activeEditor.getContent({format: 'raw'});
+                            objectToSend.content.RequireSession = returnObject.outData.content.RequireSession;
+                            objectToSend.content.Created = returnObject.outData.content.Created;
+
+                            postAjaj('/ajaj/ModifyContent', objectToSend, function (returnObject) {
+
+                                if (returnObject.result == true) {
+
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+
+        });
+
+        $('#buttonpreviewwysiwigpage').click(function() {
+
+            var objectToSend = {};
+            objectToSend.contentid = objectToModifyID;
+
+            postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                var url = getBaseUrl()[0];
+                url = url.substring(0, url.length - 1);
+                url = url + returnObject.outData.content.Path;
+                window.open(url, '_blank');
+
+            });
+        });
+
+        $('#wysiwigpageeditorrow').hide();
+
+        $('#buttonclosewysiwigpage').click(function() {
+
+            $('#wysiwigpageeditorrow').hide();
+        });
+
+        $('#buttonaddpage').click(function() {
+
+            isAdd = true;
+
+            $('#addeditpagevalidationerrorhr').hide();
+            $('#addeditpagevalidationerrornamerequired').hide();
+            $('#addeditpagevalidationerrortitlerequired').hide();
+            $('#addeditpagevalidationerrorpathrequired').hide();
+
+            var objectToSend = {};
+            objectToSend.webapplicationid = webApplicationId;
+            objectToSend.ContentTypeIDs = [];
+            objectToSend.ContentTypeIDs.push(6);
+
+            postAjaj('/ajaj/RetrieveContentWithCriteria', objectToSend, function(returnObject) {
+
+                if (returnObject.result == true) {
+
+                    var source = $('#mainpageselectlist-template').html();
+                    var template = Handlebars.compile(source);
+                    var merge = template({content: returnObject.outData.content});
+                    $('#mainpageselector').html(merge);
+
+                    if ($('#pagetypeselector').val() === 'subpages') {
+                        $('#pagetemplategroup').show();
+                    }
+                    else {
+                        $('#pagetemplategroup').hide();
+                    }
+
+                    $('#addeditpagemodal').modal({keyboard: false});
+                }
+            });
+
+        });
+
+        var clearAndAddContentDependency = function(contentid, dependsonContentID, cb) {
+
+            var objectToSend = {};
+
+            objectToSend.contentid = contentid;
+
+            postAjaj('/ajaj/RetrieveContentDependencies', objectToSend, function(returnObject) {
+
+                for (var i = 0; i < returnObject.outData.contentdependencies.length; i++) {
+
+                    if (returnObject.outData.contentdependencies[i].ContentTypeID == 6) {
+
+                        objectToSend.contentdependency = {};
+                        objectToSend.contentdependency.ContentDependencyID = returnObject.outData.contentdependencies[i].ContentDependencyID;
+
+                        postAjaj('/ajaj/DeleteContentDependency', objectToSend, function(returnObject) {
+
+                            var objectToSendAgain = {};
+                            objectToSendAgain.contentdependency = {};
+                            objectToSendAgain.contentdependency.ContentID = contentid;
+                            objectToSendAgain.contentdependency.DependsOnContentID = parseInt(dependsonContentID);
+
+                            postAjaj('/ajaj/AddContentDependency', objectToSendAgain, function(returnObject) {
+                                cb();
+                            });
+                        });
+                        break;
+                    }
+                }
+            });
+        };
+
+        $('#addeditpagesavechangesbutton').click(function() {
+
+            $('#addeditpagevalidationerrorhr').hide();
+            $('#addeditpagevalidationerrornamerequired').hide();
+            $('#addeditpagevalidationerrortitlerequired').hide();
+            $('#addeditpagevalidationerrorpathrequired').hide();
+
+            var pagename = $('#pagename').val();
+            var pagetitle = $('#pagetitle').val();
+            var pagepath = $('#pagepath').val();
+            var pagedescription = $('#pagedescription').val();
+            var pagerequiresession = $('#pagerequiresession').is('checked');
+            var pagemainpagetemplateid = $('#pagemainpagetemplate').val();
+
+            var validationfailed = false;
+
+            if (pagename.length == 0) {
+                validationfailed = true;
+                $('#addeditpagevalidationerrornamerequired').show();
+            }
+
+            if (pagetitle.length == 0) {
+                validationfailed = true;
+                $('#addeditpagevalidationerrortitlerequired').show();
+            }
+
+            if (pagepath.length == 0) {
+                validationfailed = true;
+                $('#addeditpagevalidationerrorpathrequired').show();
+            }
+
+            if (true == validationfailed)
+                $('#addeditpagevalidationerrorhr').show();
+
+            if (false === validationfailed) {
+
+                if (isAdd == true) {
+
+                    $('#addeditpagemodal').modal('hide');
+
+                    var objectToSend = {};
+
+                    objectToSend.content = {};
+
+                    if ($('#pagetypeselector').val() === 'mainpages'){
+                        objectToSend.content.ContentTypeID = 6;
+                    }
+                    else {
+                        objectToSend.content.ContentTypeID = 2;
+                    }
+
+                    objectToSend.content.Title = pagetitle;
+                    objectToSend.content.Path = pagepath;
+                    objectToSend.content.Name = pagename;
+                    objectToSend.content.Description = pagedescription;
+                    objectToSend.content.WebApplicationID = webApplicationId;
+                    objectToSend.content.ContentBlob = null;
+                    objectToSend.content.ContentText = null;
+                    objectToSend.content.RequireSession = pagerequiresession;
+                    objectToSend.content.Created = moment().toISOString();
+
+                    postAjaj('/ajaj/AddContent', objectToSend, function (returnObject) {
+
+                        if (returnObject.result == true) {
+
+                            if ($('#pagetypeselector').val() === 'subpages') {
+
+                                var objectToSendAgain = {};
+                                objectToSendAgain.contentdependency = {};
+                                objectToSendAgain.contentdependency.ContentID = returnObject.outData.contentid;
+                                objectToSendAgain.contentdependency.DependsOnContentID = pagemainpagetemplateid;
+
+                                postAjaj('/ajaj/AddContentDependency', objectToSendAgain, function (returnObject) {
+
+                                    InitializePages();
+
+                                });
+                            }
+                            else {
+                                InitializePages();
+                            }
+                        }
+                    });
+                }
+                else {
+
+                    var objectToSend = {};
+                    objectToSend.contentid = objectToModifyID;
+
+                    postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                        if (returnObject.result == true) {
+
+                            $('#addeditpagemodal').modal('hide');
+
+                            var objectToSend = {};
+
+                            objectToSend.content = {};
+                            objectToSend.content.ContentID = objectToModifyID;
+
+                            if ($('#pagetypeselector').val() === 'mainpages'){
+                                objectToSend.content.ContentTypeID = 6;
+                            }
+                            else {
+                                objectToSend.content.ContentTypeID = 2;
+                            }
+
+                            objectToSend.content.Title = pagetitle;
+                            objectToSend.content.Path = pagepath;
+                            objectToSend.content.Name = pagename;
+                            objectToSend.content.Description = pagedescription;
+                            objectToSend.content.WebApplicationID = webApplicationId;
+                            objectToSend.content.ContentBlob = returnObject.outData.content.ContentBlob;
+                            objectToSend.content.ContentText = returnObject.outData.content.ContentText;
+                            objectToSend.content.RequireSession = pagerequiresession;
+                            objectToSend.content.Created = returnObject.outData.content.Created;
+
+                            postAjaj('/ajaj/ModifyContent', objectToSend, function (returnObject) {
+
+                                if (returnObject.result == true) {
+
+                                    if ($('#pagetypeselector').val() === 'subpages') {
+
+                                        clearAndAddContentDependency(objectToSend.content.ContentID, pagemainpagetemplateid, function () {
+
+                                            InitializePages();
+
+                                        });
+                                    }
+                                    else {
+                                        InitializePages();
+                                    }
+                                }
+                            });
+                        }
+                    });
+                }
+            }
+
+        });
+
+        $('#buttonaddmedia').click(function() {
+
+            isAdd = true;
+
+            $('#adduservalidationerrorhr').hide();
+            $('#adduservalidationerrorusernamerequired').hide();
+            $('#adduservalidationerrorpasswordrequired').hide();
+            $('#adduservalidationerrorpasswordsmatch').hide();
+
+            $('#addeditmediamodal').modal({keyboard: false});
+
+        });
+
+        $('#addeditmediasavechangesbutton').click(function() {
+
+            $('#addeditmediavalidationerrorhr').hide();
+            $('#addeditmediavalidationerrortyperequired').hide();
+            $('#addeditmediavalidationerroruploadrequired').hide();
+            $('#addeditmediavalidationerrornamerequired').hide();
+            $('#addeditmediavalidationerrortitlerequired').hide();
+            $('#addeditmediavalidationerrorpathrequired').hide();
+
+            var mediatype = $('#mediatype').val();
+            var mediaupload = $('#mediaupload').val();
+            var medianame = $('#medianame').val();
+            var mediatitle = $('#mediatitle').val();
+            var mediapath = $('#mediapath').val();
+            var mediadescription = $('#mediadescription').val();
+
+            var validationfailed = false;
+
+            if (mediaupload.length == 0){
+                validationfailed = true;
+                $('#addeditmediavalidationerroruploadrequired').show();
+            }
+
+            if (medianame.length == 0) {
+                validationfailed = true;
+                $('#addeditpagevalidationerrornamerequired').show();
+            }
+
+            if (mediatitle.length == 0) {
+                validationfailed = true;
+                $('#addeditpagevalidationerrortitlerequired').show();
+            }
+
+            if (mediapath.length == 0) {
+                validationfailed = true;
+                $('#addeditpagevalidationerrorpathrequired').show();
+            }
+
+            if (true == validationfailed)
+                $('#addeditpagevalidationerrorhr').show();
+
+            if (false === validationfailed) {
+
+                if (isAdd == true) {
+
+                    $('#addeditmediamodal').modal('hide');
+
+                    var file = $('#mediaupload')[0].files[0];
+
+                    var fileReader = new FileReader();
+
+                    fileReader.onload = function(e) {
+
+                        var objectToSend = {};
+
+                        objectToSend.content = {};
+                        objectToSend.content.ContentTypeID = parseInt(mediatype);
+                        objectToSend.content.Title = mediatitle;
+                        objectToSend.content.Path = mediapath;
+                        objectToSend.content.Name = medianame;
+                        objectToSend.content.Description = mediadescription;
+                        objectToSend.content.WebApplicationID = webApplicationId;
+                        objectToSend.content.ContentBlob = null;
+                        objectToSend.content.ContentText = null;
+                        objectToSend.content.RequireSession = 0;
+                        objectToSend.content.Created = moment().toISOString();
+
+                        objectToSend.content.ContentText = fileReader.result.split(',')[1];
+
+                        postAjaj('/ajaj/AddContent', objectToSend, function (returnObject) {
+
+                            if (returnObject.result == true) {
+
+                                InitializeMedia();
+                            }
+                        });
+                    };
+
+                    fileReader.readAsDataURL(file);
+                }
+                else {
+
+                    var objectToSend = {};
+                    objectToSend.contentid = objectToModifyID;
+
+                    postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                        if (returnObject.result == true) {
+
+                            $('#addeditmediamodal').modal('hide');
+
+                            var file = $('#mediaupload')[0].files[0];
+
+                            var fileReader = new FileReader();
+
+                            fileReader.onload = function(e) {
+
+                                var objectToSend = {};
+
+                                objectToSend.content = {};
+                                objectToSend.content.ContentID = objectToModifyID;
+                                objectToSend.content.ContentTypeID = parseInt(mediatype);
+                                objectToSend.content.Title = mediatitle;
+                                objectToSend.content.Path = mediapath;
+                                objectToSend.content.Name = medianame;
+                                objectToSend.content.Description = mediadescription;
+                                objectToSend.content.WebApplicationID = webApplicationId;
+                                objectToSend.content.ContentBlob = returnObject.outData.content.ContentBlob;
+                                objectToSend.content.ContentText = returnObject.outData.content.ContentText;
+                                objectToSend.content.RequireSession = 0;
+                                objectToSend.content.Created = returnObject.outData.content.Created;
+
+                                objectToSend.content.ContentText = fileReader.result.split(',')[1];
+
+                                postAjaj('/ajaj/ModifyContent', objectToSend, function (returnObject) {
+
+                                    if (returnObject.result == true) {
+
+                                        InitializeMedia();
+                                    }
+                                });
+                            }
+
+                            fileReader.readAsDataURL(file);
+                        }
+                    });
+                }
+            }
+
+        });
+
+        $('#buttonadduser').click(function() {
+
+            isAdd = true;
+
+            $('#adduservalidationerrorhr').hide();
+            $('#addeditmediavalidationerrortyperequired').hide();
+            $('#addeditmediavalidationerroruploadrequired').hide();
+            $('#addeditmediavalidationerrornamerequired').hide();
+            $('#addeditmediavalidationerrortitlerequired').hide();
+            $('#addeditmediavalidationerrorpathrequired').hide();
+
+            $('#addeditusermodal').modal({keyboard: false});
+        });
+
+        $('#addeditusersavechangesbutton').click(function() {
+
+            $('#adduservalidationerrorhr').hide();
+            $('#adduservalidationerrorusernamerequired').hide();
+            $('#adduservalidationerrorpasswordrequired').hide();
+            $('#adduservalidationerrorpasswordsmatch').hide();
+
+            var username = $('#username').val();
+            var password = $('#password').val();
+            var repeatpassword = $('#repeatpassword').val();
+
+            var validationfailed = false;
+
+            if (username.length == 0) {
+                validationfailed = true;
+                $('#adduservalidationerrorusernamerequired').show();
+            }
+
+            if (password.length == 0) {
+                validationfailed = true;
+                $('#adduservalidationerrorpasswordrequired').show();
+            }
+
+            if (password !== repeatpassword) {
+                validationfailed = true;
+                $('#adduservalidationerrorpasswordsmatch').show();
+            }
+
+            if (true == validationfailed)
+                $('#adduservalidationerrorhr').show();
+
+            if (false === validationfailed) {
+
+                if (isAdd == true) {
+
+                    $('#addeditusermodal').modal('hide');
+
+                    var objectToSend = {};
+
+                    objectToSend.securityuser = {};
+                    objectToSend.securityuser.WebApplicationID = webApplicationId;
+                    objectToSend.securityuser.Username = username;
+                    objectToSend.securityuser.Password = password;
+                    objectToSend.securityuser.ExternalSecurityUserID = null;
+
+                    postAjaj('/ajaj/AddSecurityUser', objectToSend, function (returnObject) {
+
+                        if (returnObject.result == true) {
+
+                            InitializeSecurity();
+                        }
+                    });
+                }
+                else {
+
+                    $('#addeditusermodal').modal('hide');
+
+                    var objectToSend = {};
+
+                    objectToSend.securityuser = {};
+                    objectToSend.securityuser.SecurityUserID = objectToModifyID;
+                    objectToSend.securityuser.WebApplicationID = webApplicationId;
+                    objectToSend.securityuser.Username = username;
+                    objectToSend.securityuser.Password = password;
+                    objectToSend.securityuser.ExternalSecurityUserID = null;
+
+                    postAjaj('/ajaj/ModifySecurityUser', objectToSend, function (returnObject) {
+
+                        if (returnObject.result == true) {
+
+                            InitializeSecurity();
+                        }
+                    });
+                }
+            }
+        });
+
+        $('#addeditblogsavechangesbutton').click(function() {
+
+            $('#addeditblogvalidationerrorhr').hide();
+            $('#addeditblogvalidationerrornamerequired').hide();
+
+            var blogname = $('#blogname').val();
+            var blogdescription = $('#blogdescription').val();
+            var blogactive = $('#blogisactive').is(':checked');
+
+            var validationfailed = false;
+
+            if (username.length == 0) {
+                validationfailed = true;
+                $('#adduservalidationerrorusernamerequired').show();
+            }
+
+            if (true == validationfailed)
+                $('#addeditblogvalidationerrorhr').show();
+
+            if (false === validationfailed) {
+
+                if (isAdd == true) {
+
+                    $('#addeditblogmodal').modal('hide');
+
+                    var objectToSend = {};
+
+                    objectToSend.blog = {};
+                    objectToSend.blog.WebApplicationID = webApplicationId;
+                    objectToSend.blog.Name = blogname;
+                    objectToSend.blog.Description = blogdescription;
+                    objectToSend.blog.Created = moment().toISOString();
+                    objectToSend.blog.IsActive = blogactive;
+                    objectToSend.blog.OwnerSecurityUserID = loggedInSecurityUserID;
+
+                    postAjaj('/ajaj/AddBlog', objectToSend, function (returnObject) {
+
+                        if (returnObject.result == true) {
+
+                            InitializeBlogs();
+                        }
+                    });
+                }
+                else {
+
+                    $('#addeditblogmodal').modal('hide');
+
+                    var objectToSend = {};
+
+                    objectToSend.blog = {};
+                    objectToSend.blog.BlogID = objectToModifyID;
+                    objectToSend.blog.WebApplicationID = webApplicationId;
+                    objectToSend.blog.Name = blogname;
+                    objectToSend.blog.Description = blogdescription;
+                    objectToSend.blog.Created = moment().toISOString();
+                    objectToSend.blog.IsActive = blogactive;
+                    objectToSend.blog.OwnerSecurityUserID = loggedInSecurityUserID;
+
+                    postAjaj('/ajaj/ModifyBlog', objectToSend, function (returnObject) {
+
+                        if (returnObject.result == true) {
+
+                            InitializeBlogs();
+                        }
+                    });
+                }
+            }
+
+        });
+
+    });
+
+    var InitializeBlogs = function() {
+
+        var objectToSend = {};
+
+        objectToSend.webapplicationid = webApplicationId;
+
+        postAjaj('/ajaj/RetrieveAllBlogs', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                var source = $('#blogs-template').html();
+                var template = Handlebars.compile(source);
+                var merge = template({blogs: returnObject.outData.blogs});
+                $('#datagridblogs').html(merge);
+
+                $('div #datagridblogs a').on("click", function() {
+
+                    var id = $(this).data('id');
+                    objectToModifyID = id;
+
+                    if ($(this).first().text() === 'edit') {
+                        isAdd = false;
+                        OnEditBlog(id);
+                    }
+                    else if ($(this).first().text() === 'delete') {
+
+                        bootbox.confirm("Are you sure you want to delete the selected blog?", function(result) {
+
+                            if (true == result) {
+
+                                objectToSend.blog = {};
+                                objectToSend.blog.BlogID = id;
+
+                                postAjaj('/ajaj/DeleteBlog', objectToSend, function (returnObject) {
+
+                                    if (returnObject.result == true) {
+
+                                        InitializeBlogs();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+    };
+
+    var InitializeBlogEntries = function() {
+
+        var objectToSend = {};
+
+        objectToSend.webapplicationid = webApplicationId;
+
+        postAjaj('/ajaj/RetrieveAllBlogs', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                var source = $('#blogentriesselectlist-template').html();
+                var template = Handlebars.compile(source);
+                var merge = template({blogs: returnObject.outData.blogs});
+                $('#selectlistblogs').html(merge);
+
+                $('#blogselect').change(function() {
+                   OnSelectBlogEntriesBlog();
+                });
+
+                OnSelectBlogEntriesBlog(function() {
+
+                    $('div #datagridblogentries a').on("click", function() {
+
+                        var uiobject = this;
+                        var id = $(this).data('id');
+                        objectToModifyID = id;
+
+                        objectToSend.blogentryid = id;
+
+                        postAjaj('/ajaj/RetrieveBlogEntryByBlogEntryID', objectToSend, function(returnObject) {
+
+                            objectToModifyID = returnObject.outData.blogentry.ContentID;
+
+                            if ($(uiobject).first().text() === 'edit') {
+                                isAdd = false;
+                                OnEditBlogEntry(objectToModifyID);
+                            }
+                            else if ($(uiobject).first().text() === 'edit raw') {
+
+                                objectToSend = {};
+                                objectToSend.contentid = objectToModifyID;
+
+                                postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+                                    var editor = ace.edit("rawblogentryeditordiv");
+                                    editor.setTheme("ace/theme/monokai");
+                                    editor.getSession().setMode("ace/mode/html");
+                                    editor.setValue(returnObject.outData.content.ContentText);
+                                    $('#rawblogentryeditorrow').show();
+                                });
+                            }
+                            else if ($(uiobject).first().text() === 'edit wysiwig') {
+                                objectToSend = {};
+                                objectToSend.contentid = objectToModifyID;
+
+                                postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+                                    $('#wysiwigblogentryeditortextarea').val(returnObject.outData.content.ContentText);
+
+                                    tinymce.init({
+                                        selector: '#wysiwigblogentryeditortextarea',
+                                        theme: 'modern',
+                                        plugins: [
+                                            'advlist anchor autolink autosave bbcode charmap code codesample colorpicker compat3x contextmenu directionality emoticons fullpage fullscreen hr image imagetools importcss insertdatetime layer legacyoutput link lists media nonbreaking noneditable pagebreak paste preview print save searchreplace tabfocus table template textcolor textpattern visualblocks visualchars wordcount'
+                                        ],
+                                        content_css: 'stylesheets/style-admin.css',
+                                        toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
+                                    });
+
+                                    $('#wysiwigblogentryeditorrow').show();
+                                });
+                            }
+                            else if ($(uiobject).first().text() === 'delete') {
+
+                                bootbox.confirm("Are you sure you want to delete the selected blog entry?", function(result) {
+
+                                    if (true == result) {
+
+                                        objectToSend.content = {};
+                                        objectToSend.content.ContentID = objectToModifyID;
+
+                                        postAjaj('/ajaj/DeleteContent', objectToSend, function(returnObject) {
+
+                                            objectToSend.blogentry = {};
+                                            objectToSend.blogentry.BlogEntryID = id;
+
+                                            postAjaj('/ajaj/DeleteBlogEntry', objectToSend, function (returnObject) {
+
+                                                if (returnObject.result == true) {
+
+                                                    InitializeBlogEntries();
+                                                }
+                                            });
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    });
+                });
+            }
+        });
+
+    };
+
+    var OnSelectBlogEntriesBlog = function(cb) {
+
+        var selectedBlogID = $('#blogselect').val();
+
+        var objectToSend = {};
+        objectToSend.blogid = parseInt(selectedBlogID);
+
+        postAjaj('/ajaj/RetrieveAllBlogEntries', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                var source = $('#blogentries-template').html();
+                var template = Handlebars.compile(source);
+                var merge = template({blogentries: returnObject.outData.blogentries});
+                $('#datagridblogentries').html(merge);
+                cb();
+            }
+        });
+    };
+
+    $('#pagetypeselector').change(function() {
+        InitializePages();
+    });
+
+    var InitializePages = function() {
+
+        var objectToSend = {};
+        objectToSend.webapplicationid = webApplicationId;
+
+        if ($('#pagetypeselector').val() === 'mainpages'){
+            objectToSend.contenttypeid = 6;
+        }
+        else
+        {
+            objectToSend.contenttypeid = 2;
+        }
+
+        postAjaj('/ajaj/RetrieveAllContent', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                var source = $('#pages-template').html();
+                var template = Handlebars.compile(source);
+                var merge = template({pages: returnObject.outData.content});
+                $('#datagridspages').html(merge);
+
+                $('div #datagridspages a').on("click", function() {
+
+                    var id = $(this).data('id');
+                    objectToModifyID = id;
+
+                    if ($(this).first().text() === 'edit') {
+                        isAdd = false;
+                        OnEditPage(id);
+                    }
+                    else if ($(this).first().text() === 'delete') {
+
+                        bootbox.confirm("Are you sure you want to delete the selected page?", function(result) {
+
+                            if (true == result) {
+
+                                objectToSend.content = {};
+                                objectToSend.content.ContentID = id;
+
+                                postAjaj('/ajaj/DeleteContent', objectToSend, function (returnObject) {
+
+                                    if (returnObject.result == true) {
+
+                                        InitializePages();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                    else if ($(this).first().text() === 'edit raw') {
+
+                        objectToSend = {};
+                        objectToSend.contentid = objectToModifyID;
+
+                        postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+                            var editor = ace.edit("rawpageeditordiv");
+                            editor.setTheme("ace/theme/monokai");
+                            editor.getSession().setMode("ace/mode/html");
+                            editor.setValue(returnObject.outData.content.ContentText);
+                            $('#rawpageeditorrow').show();
+                        });
+                    }
+                    else if ($(this).first().text() === 'edit wysiwig') {
+                        objectToSend = {};
+                        objectToSend.contentid = objectToModifyID;
+
+                        postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+                            $('#wysiwigpageeditortextarea').val(returnObject.outData.content.ContentText);
+
+                            tinymce.init({
+                                selector: '#wysiwigpageeditortextarea',
+                                theme: 'modern',
+                                plugins: [
+                                    'advlist anchor autolink autosave bbcode charmap code codesample colorpicker compat3x contextmenu directionality emoticons fullpage fullscreen hr image imagetools importcss insertdatetime layer legacyoutput link lists media nonbreaking noneditable pagebreak paste preview print save searchreplace tabfocus table template textcolor textpattern visualblocks visualchars wordcount'
+                                ],
+                                content_css: 'stylesheets/style-admin.css',
+                                toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
+                            });
+
+                            $('#wysiwigpageeditorrow').show();
+                        });
+                    }
+                });
+            }
+        });
+
+    };
+
+    var InitializeMedia = function() {
+
+        var objectToSend = {};
+        objectToSend.webapplicationid = webApplicationId;
+        objectToSend.ContentTypeIDs = [];
+        objectToSend.ContentTypeIDs.push(8);
+        objectToSend.ContentTypeIDs.push(9);
+        objectToSend.ContentTypeIDs.push(10);
+
+        postAjaj('/ajaj/RetrieveContentWithCriteria', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                var source = $('#media-template').html();
+                var template = Handlebars.compile(source);
+                var merge = template({media: returnObject.outData.content});
+                $('#datagridmedia').html(merge);
+
+                $('div #datagridmedia a').on("click", function() {
+
+                    var id = $(this).data('id');
+                    objectToModifyID = id;
+
+                    if ($(this).first().text() === 'edit') {
+                        isAdd = false;
+                        OnEditMedia(id);
+                    }
+                    else if ($(this).first().text() === 'delete') {
+
+                        bootbox.confirm("Are you sure you want to delete the selected media?", function(result) {
+
+                            if (true == result) {
+
+                                objectToSend.content = {};
+                                objectToSend.content.ContentID = id;
+
+                                postAjaj('/ajaj/DeleteContent', objectToSend, function (returnObject) {
+
+                                    if (returnObject.result == true) {
+
+                                        InitializeMedia();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                })
+            }
+        });
+
+
+    };
+
+    var InitializeSecurity = function() {
+
+        var objectToSend = {};
+
+        objectToSend.webapplicationid = webApplicationId;
+
+        postAjaj('/ajaj/RetrieveAllSecurityUsers', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                var source = $('#users-template').html();
+                var template = Handlebars.compile(source);
+                var merge = template({securityusers: returnObject.outData.securityusers});
+                $('#datagridsecurity').html(merge);
+
+                $('div #datagridsecurity a').on("click", function() {
+
+                    var id = $(this).data('id');
+                    objectToModifyID = id;
+
+                    if ($(this).first().text() === 'change password') {
+                        isAdd = false;
+                        OnEditSecurityUser(id);
+                    }
+                    else if ($(this).first().text() === 'edit') {
+                        isAdd = false;
+                        OnEditSecurityUser(id);
+                    }
+                    else if ($(this).first().text() === 'delete') {
+
+                        bootbox.confirm("Are you sure you want to delete the selected user?", function(result) {
+
+                            if (true == result) {
+
+                                objectToSend.securityuser = {};
+                                objectToSend.securityuser.SecurityUserID = id;
+
+                                postAjaj('/ajaj/DeleteSecurityUser', objectToSend, function (returnObject) {
+
+                                    if (returnObject.result == true) {
+
+                                        InitializeSecurity();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+    };
+
+    var OnEditSecurityUser = function(id) {
+        $('#adduservalidationerrorhr').hide();
+        $('#adduservalidationerrorusernamerequired').hide();
+        $('#adduservalidationerrorpasswordrequired').hide();
+        $('#adduservalidationerrorpasswordsmatch').hide();
+
+        var objectToSend = {};
+        objectToSend.securityuserid = id;
+
+        postAjaj('/ajaj/RetrieveSecurityUserBySecurityUserID', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                $('#username').val(returnObject.outData.securityuser.Username);
+                $('#password').val(returnObject.outData.securityuser.Password);
+                $('#repeatpassword').val(returnObject.outData.securityuser.Password);
+
+                $('#addeditusermodal').modal({keyboard: false});
+            }
+        });
+    };
+
+    var OnEditBlog = function(id) {
+        $('#addeditblogvalidationerrorhr').hide();
+        $('#adduservalidationerrorusernamerequired').hide();
+
+        var objectToSend = {};
+        objectToSend.blogid = id;
+
+        postAjaj('/ajaj/RetrieveBlogByBlogID', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                $('#blogname').val(returnObject.outData.blog.Name);
+                $('#blogdescription').val(returnObject.outData.blog.Description);
+                $('#blogisactive').val(returnObject.outData.blog.IsActive);
+
+                $('#addeditblogmodal').modal({keyboard: false});
+            }
+        });
+    };
+
+    var OnEditBlogEntry = function(id) {
+        $('#addeditblogentryvalidationerrorhr').hide();
+        $('#addeditblogentryvalidationerrornamerequired').hide();
+        $('#addeditblogentryvalidationerrortitlerequired').hide();
+        $('#addeditblogentryvalidationerrorpathrequired').hide();
+
+        var objectToSend = {};
+        objectToSend.webapplicationid = webApplicationId;
+        objectToSend.ContentTypeIDs = [];
+        objectToSend.ContentTypeIDs.push(6);
+
+        postAjaj('/ajaj/RetrieveContentWithCriteria', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                var source = $('#mainpageselectlist-template').html();
+                var template = Handlebars.compile(source);
+                var merge = template({content: returnObject.outData.content});
+                $('#blogentrymainpageselector').html(merge);
+
+                var objectToSend = {};
+                objectToSend.contentid = id;
+
+                postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                    if (returnObject.result == true) {
+
+                        $('#pagename').val(returnObject.outData.content.Name);
+                        $('#pagerequiresession').val(returnObject.outData.content.RequireSession);
+                        $('#pagedescription').val(returnObject.outData.content.Description);
+                        $('#pagepath').val(returnObject.outData.content.Path);
+                        $('#pagetitle').val(returnObject.outData.content.Title);
+
+                        postAjaj('/ajaj/RetrieveContentDependencies', objectToSend, function(returnObject) {
+
+                            for (var i = 0; i < returnObject.outData.contentdependencies.length; i++) {
+
+                                if (returnObject.outData.contentdependencies[i].ContentTypeID == 6) {
+
+                                    $('#pagemainpagetemplate').val(returnObject.outData.contentdependencies[i].ContentID);
+
+                                    $('#addeditblogentrymodal').modal({keyboard: false});
+                                    break;
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    };
+
+    var OnEditPage = function(id) {
+        $('#addeditpagevalidationerrorhr').hide();
+        $('#addeditpagevalidationerrornamerequired').hide();
+        $('#addeditpagevalidationerrortitlerequired').hide();
+        $('#addeditpagevalidationerrorpathrequired').hide();
+
+        var objectToSend = {};
+        objectToSend.webapplicationid = webApplicationId;
+        objectToSend.ContentTypeIDs = [];
+        objectToSend.ContentTypeIDs.push(6);
+
+        postAjaj('/ajaj/RetrieveContentWithCriteria', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                var source = $('#mainpageselectlist-template').html();
+                var template = Handlebars.compile(source);
+                var merge = template({content: returnObject.outData.content});
+                $('#mainpageselector').html(merge);
+
+                var objectToSend = {};
+                objectToSend.contentid = id;
+
+                postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                    if (returnObject.result == true) {
+
+                        $('#pagename').val(returnObject.outData.content.Name);
+                        $('#pagerequiresession').val(returnObject.outData.content.RequireSession);
+                        $('#pagedescription').val(returnObject.outData.content.Description);
+                        $('#pagepath').val(returnObject.outData.content.Path);
+                        $('#pagetitle').val(returnObject.outData.content.Title);
+
+                        if ($('#pagetypeselector').val() === 'subpages') {
+                            $('#pagetemplategroup').show();
+
+                            postAjaj('/ajaj/RetrieveContentDependencies', objectToSend, function(returnObject) {
+
+                                for (var i = 0; i < returnObject.outData.contentdependencies.length; i++) {
+
+                                    if (returnObject.outData.contentdependencies[i].ContentTypeID == 6) {
+
+                                        $('#pagemainpagetemplate').val(returnObject.outData.contentdependencies[i].ContentID);
+
+                                        $('#addeditpagemodal').modal({keyboard: false});
+                                        break;
+                                    }
+                                }
+                            });
+                        }
+                        else {
+                            $('#pagetemplategroup').hide();
+
+                            $('#addeditpagemodal').modal({keyboard: false});
+                        }
+                    }
+                });
+            }
+        });
+    };
+
+    var OnEditMedia = function(id) {
+        $('#adduservalidationerrorhr').hide();
+        $('#addeditmediavalidationerrortyperequired').hide();
+        $('#addeditmediavalidationerroruploadrequired').hide();
+        $('#addeditmediavalidationerrornamerequired').hide();
+        $('#addeditmediavalidationerrortitlerequired').hide();
+        $('#addeditmediavalidationerrorpathrequired').hide();
+
+        var objectToSend = {};
+        objectToSend.webapplicationid = webApplicationId;
+        objectToSend.ContentTypeIDs = [];
+        objectToSend.ContentTypeIDs.push(8);
+        objectToSend.ContentTypeIDs.push(9);
+        objectToSend.ContentTypeIDs.push(10);
+
+        postAjaj('/ajaj/RetrieveContentWithCriteria', objectToSend, function(returnObject) {
+
+            if (returnObject.result == true) {
+
+                var objectToSend = {};
+                objectToSend.contentid = id;
+
+                postAjaj('/ajaj/RetrieveContentByContentID', objectToSend, function(returnObject) {
+
+                    if (returnObject.result == true) {
+
+                        $('#medianame').val(returnObject.outData.content.Name);
+                        $('#mediadescription').val(returnObject.outData.content.Description);
+                        $('#mediatitle').val(returnObject.outData.content.Title);
+                        $('#mediatype').val(returnObject.outData.content.ContentTypeID);
+                        $('#mediapath').val(returnObject.outData.content.Path);
+
+                        $('#addeditmediamodal').modal({keyboard: false});
+                    }
+                });
+            }
+        });
+    };
+
+</script>
+
+<script type="text/javascript">
+    /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-43426391-4', 'auto');
+     ga('send', 'pageview');*/
+
+</script>

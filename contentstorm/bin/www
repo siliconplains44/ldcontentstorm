@@ -1,0 +1,61 @@
+#!/usr/bin/env node
+var debug = require('debug')('contentstorm');
+var app = require('../app');
+var https = require('https');
+var fs = require('fs');
+
+var cluster = require('cluster');
+
+var sslOptions = {
+  key: fs.readFileSync(__dirname + '/../certs2016/leoparddata.key'),
+  cert: fs.readFileSync(__dirname + '/../certs2016/48a67353a0ab3cfa.crt'),
+  ca: [fs.readFileSync(__dirname + '/../certs2016/gd1.crt'), fs.readFileSync(__dirname + '/../certs2016/gd2.crt'), fs.readFileSync(__dirname + '/../certs2016/gd3.crt')],
+  requestCert: true,
+  rejectUnauthorized: false
+};
+
+var clusteron = false;
+
+if (clusteron == true) {
+
+  if (cluster.isMaster) {
+
+    // Count the machine's CPUs
+    var cpuCount = require('os').cpus().length;
+
+    // Create a worker for each CPU
+
+    for (var i = 0; i < cpuCount; i += 1) {
+      cluster.fork();
+    }
+
+// Code to run if we're in a worker process
+  } else {
+
+    var secureServer = https.createServer(sslOptions, app).listen('3000', function () {
+      console.log("Secure Express server listening on port 3000");
+    });
+
+    process.on('uncaughtException', function (err) {
+      console.log(err);
+      console.trace();
+    });
+  }
+
+// Listen for dying workers
+  cluster.on('exit', function (worker) {
+
+    // Replace the dead worker,
+    // we're not sentimental
+    console.log('Worker ' + worker.id + ' died :(');
+    cluster.fork();
+
+  });
+
+}
+else {
+
+  var secureServer = https.createServer(sslOptions, app).listen('3000', function () {
+    console.log("Secure Express server listening on port 3000");
+  });
+}

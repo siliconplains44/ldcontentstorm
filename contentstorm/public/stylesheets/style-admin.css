@@ -1,0 +1,143 @@
+html,body {
+    background-color: lightgray;
+    height:100%;
+}
+
+a {
+    color: lightgray;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.mainadminmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    background-color: #222;
+    left:0px;
+    height: 100%; /* Full height */
+}
+
+.mainadminmenuitem {
+    display: block;
+    color: lightgray;
+    text-decoration: none;
+    font-size: large;
+    text-decoration: none;
+    height: 30px;
+    width: 160px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.mainadminmenuitemanchor {
+    padding-top: 5px;
+}
+
+li a:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    height:30px;
+}
+
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.tablewrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.internalheader {
+    background-color: #222;
+    height: 50px;
+    font-size: Large;
+    color: lightgray;
+    text-align: left;
+}
+
+.leftpane {
+    height: 100%; /* Full height */
+    background-color: #222;
+    display: table-cell;
+    width: 160px;
+}
+
+.rightpane {
+    padding-top:30px;
+    background-color: lightgray;
+    height: 100%;
+    display: table-cell;
+}
+
+table {
+    width:100%;
+    border: 1px solid black;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+@media screen and (max-width: 600px) {
+
+    table {
+        border: 0;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    table td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+select {
+    font-size: large;
+}
+
+.validationerror {
+    color: red;
+    display: none;
+}
+
+.tableanchors {
+    color: black
+}
+
+.fullwidthtextarea {
+    width: 100%;
+    height: 500px;
+}

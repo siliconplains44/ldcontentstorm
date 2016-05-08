@@ -1,0 +1,8 @@
+1. Create database
+2. copy contentstorm base code to new project
+3. add webapplication, note id of web application
+4. fill out contenttypes table with data from master
+5. within contentstorm code set config.ts to correct database
+6. within contentstorm code set utility.ts to webapplicationid
+7. add main pages (blogs and sub pages dependent), at least 1
+
