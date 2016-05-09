@@ -32,7 +32,7 @@ exports.allroutes = function(req, res){
                                 res.end();
                             }
                             else {
-                                var finalContent = content.ContentDepText.replace('<div id=“subbody”></div>', '<div id="subbody">' + content.ContentText + '</div>');
+                                var finalContent = content.ContentDepText.replace('<div id="subbody"></div>', '<div id="subbody">' + content.ContentText + '</div>');
                                 res.write(finalContent);
                                 res.end();
                             }
