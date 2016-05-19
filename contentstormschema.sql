@@ -4,7 +4,7 @@ Navicat MariaDB Data Transfer
 Source Server         : Mothership
 Source Server Version : 100015
 Source Host           : mothershipmaria.leoparddata.com:3306
-Source Database       : cscoquest
+Source Database       : contentstorm
 
 Target Server Type    : MariaDB
 Target Server Version : 100015
